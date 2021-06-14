@@ -5,6 +5,8 @@
 ##### Starcrft vs Alien 게임은 SSD1306 display에 2D animation을 띄워서 만든 게임으로, 라즈베리파이의 GPIO pin들 중 총 4개를 게임 조작 버튼으로 사용했다. 플레이어는 starcraft가 되어 Alien을 공격하여 우주를 구한다. 총 세 단계로 이루어지며, 모든 단계에서 Alien을 상대로 승리해야만 진정한 starcrafter가 될 수 있다.
 
 
+##### Level에 따라 Player, Alien이 한 화면 안에서 쏠 수 있는 bullet의 수가 달라진다. 또한, 시간제한과 생명의 개수도 달라진다.  
+
 
 ##### 1. Start Page : 가장 왼쪽의 Start_pin을 누르면 게임이 시작되며, Player가 게임을 그만하겠다고 Quit 버튼을 누르면 돌아오는 페이지이기도 하다.
 ##### ![image](https://user-images.githubusercontent.com/80879131/121852455-79294380-cd2a-11eb-8147-58d8586ac2d0.png)
