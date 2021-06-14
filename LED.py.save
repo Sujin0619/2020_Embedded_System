@@ -1,0 +1,37 @@
+from board import SCL, SDA
+import busio
+from PIL import Image, ImageDraw, ImageFont
+import adafruit_ssd1306
+import RPi.GPIO as GPIO
+import pygame
+from gpiozero import Button
+import time
+import random
+import game_func as func
+
+# button_config
+attack_pin = 17
+down_pin = 13
+up_pin = 6
+start_pin = 5
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(attack_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(down_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(up_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(start_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(26, GPIO.OUT)
+
+While True:
+   if not GPIO.input(start_pin): #start_pin is pressed
+        GPIO.output(26, True)
+        time.sleep(0.5)
+        GPIO.output(26, False)
+        time.sleep(0.5)
+
+except KeyboardInterrupt:
+    GPIO.cleanup()
+
+
+
+
